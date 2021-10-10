@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="ctx-menu-styles.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>custom context menu</title>
+</head>
+<body>
+  <div>
+    <div id="contextMenu" class="context-menu ctx-menu-closed">
+      <div class="main-ctx-menu-warapper">
+        <section class="btn-wrapper">
+          <button class="btn" data-func="back"><p>Back</p> <span>Ctrl+Left arrow</span></button>
+          <button class="btn" data-func="foward"><p>Foward</p> <span>Ctrl+Right arrow</span></button>
+          <button class="btn" data-func="refreash"><p>Reload</p> <span>Shift+R</span></button>
+        </section>
+        <section class="btn-wrapper">
+          <button class="btn" data-func="honeinsert"><p>Insert H1</p> </button>
+          <button class="btn" data-func="imginsert"><p>Insert Image</p> </button>
+          <button class="btn" data-func="taginsert"><p>Insert HTML tag</p> </button>
+        </section>
+        <section class="btn-wrapper">
+          <button class="btn" data-func="addstickynote"><p>Add sticky note</p> <span>Shift+E</span></button>
+          <button class="btn" data-func="deletestickynote"><p>Delete stick notes</p> <span>Shift+D</span></button>
+        </section>
+        <section  class="btn-wrapper">
+          <button class="btn" data-func="newurl"><p>Go to URL</p> <span>Shift+A</span></button>
+        </section>
+      </div>
+    </div>
+    <div id="TextSelectionContextMenu" class="context-menu ctx-menu-closed">
+      <div class="main-ctx-menu-warapper">
+        <section class="btn-wrapper">
+          <button class="btn" data-func="copy"><p>Copy</p> <span>Ctrl+C</span></button>
+          <button class="btn" data-func="refreash"><p>Reload</p> <span>R</span></button>
+        </section>
+        <section class="btn-wrapper">
+          <button class="btn" data-func="newurl"><p>Go to URL</p> <span>Shift+A</span></button>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div id="snContainer" class="sticky-notes-container hidden">
+    <div class="sticky-note-wrapper">
+      <header class="sticky-note-header">
+        <i class='bx bx-chevron-down dropdown'></i>
+        <input type="text" spellcheck="false" class="sn-title" maxlength="26" value="Untitled Note #1">
+        
+        <i class='bx bx-trash-alt trash' ></i>
+      </header>
+      <section class="sticky-note-body">
+        <textarea placeholder="Type note here" spellcheck="false"></textarea>
+      </section>
+    </div>
+  </div>
+
+  <main class="header-wrapper">
+    <header>
+      <h1>Welcome to custom context menu</h1>
+    </header>
+    <div>
+      <p>Right click on the screen to test it out :)</p>
+    </div>
+  </main>
+
+  <script src="./js/sticky-note-script.js" defer></script>
+  <script src="./js/ctx-menu-script.js" defer></script>
+</body>
+</html>
