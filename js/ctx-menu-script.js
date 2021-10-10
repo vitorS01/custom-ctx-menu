@@ -1,6 +1,7 @@
 // nedeed DOM elements
 const contextMenuElement = document.getElementById('contextMenu');
 const ctxTxtMenuElement = document.getElementById('TextSelectionContextMenu');
+const userAddedField = document.getElementById('added');
 const ctxBtnsElemesnts = document.querySelectorAll(
   '.main-ctx-menu-warapper [data-func]'
 );
@@ -177,7 +178,7 @@ function hOneInsert() {
     let h1 = document.createElement('h1');
     h1.textContent = textPrompt;
 
-    document.body.append(h1);
+    userAddedField.append(h1);
   }
 }
 function tagInsert() {
@@ -189,7 +190,7 @@ function tagInsert() {
     let tag = document.createElement(tagPrompt);
     tag.textContent = textPrompt == null ? '' : textPrompt;
 
-    document.body.append(tag);
+    userAddedField.append(tag);
   }
 }
 function imgInsert() {
@@ -199,7 +200,7 @@ function imgInsert() {
     img.setAttribute('src', linkPrompt);
     img.setAttribute('alt', 'Unable to Load Image');
 
-    document.body.append(img);
+    userAddedField.append(img);
   }
 }
 function copy() {
